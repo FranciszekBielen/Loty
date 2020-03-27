@@ -10,13 +10,29 @@
 </head>
 <body>
 
+<div class="grid-container">
+
 <img src="logo.jpeg" alt="logo firmy" id="logo">
 
-<header>
+<header class="item1">
     Lista lotów
 </header>
 
+<div class="item2" id="t2">
+    <ul id="menu">
+        <li><a href="#t1">Formularz</a></li>
+        <li><a href="#t2">Odloty</a></li>
+        <li><a href="#t3">Autor</a></li>
+        <li><a href="#">Nie</a></li>
+        <li><a href="#">Wiem</a></li>
+        <li><a href="#">CO</a></li>
+        <li><a href="#">Jeszcze</a></li>
+        <li><a href="#">Dodac</a></li>
+    </ul>
+</div>
 
+
+<div class="item3">
 <p id="pierwszy">
     Na ekranie widoczna jest strona internetowa, w której można zobaczyć
     połączenia samolotowe między róznymi państwami.
@@ -35,8 +51,8 @@
     kierowany lot. Czwarta i piąta natomaist mówi nam o której ma się lot zacząć.
 </p>
 
-<div style="position: relative">
-    <p id="kozak">
+<div style="position: relative" id="t1">
+    <p id="kozak" class="no-display-on-phone">
         Ale super lot!
     </p>
 
@@ -51,15 +67,15 @@
             <th>
                 dokąd
             </th>
-            <th>
+            <th class="no-display-on-phone">
                 data
             </th>
-            <th>
+            <th class="no-display-on-phone">
                 godzina
             </th>
         </tr>
-        <tr>
-            <td>
+        <tr class="cancel">
+            <td >
                 <a href="lot1.html">aa/00</a>
             </td>
             <td>
@@ -68,10 +84,10 @@
             <td>
                 Lublin
             </td>
-            <td>
+            <td class="no-display-on-phone">
                 03/03/2020
             </td>
-            <td>
+            <td class="no-display-on-phone">
                 16:45
             </td>
         </tr>
@@ -85,10 +101,10 @@
             <td>
                 Kraków
             </td>
-            <td>
+            <td class="no-display-on-phone">
                 03/03/2020
             </td>
-            <td>
+            <td class="no-display-on-phone">
                 17:12
             </td>
         </tr>
@@ -102,14 +118,14 @@
             <td>
                 Poznań
             </td>
-            <td>
+            <td class="no-display-on-phone">
                 03/03/2020
             </td>
-            <td>
+            <td class="no-display-on-phone">
                 17:43
             </td>
         </tr>
-        <tr>
+        <tr class="late">
             <td>
                 <a href="lot4.html">aa/03</a>
             </td>
@@ -119,10 +135,10 @@
             <td>
                 Lublin
             </td>
-            <td>
+            <td class="no-display-on-phone">
                 03/03/2020
             </td>
-            <td>
+            <td class="no-display-on-phone">
                 18:17
             </td>
         </tr>
@@ -136,18 +152,104 @@
             <td>
                 Gdańsk
             </td>
-            <td>
+            <td class="no-display-on-phone">
                 03/03/2020
             </td>
-            <td>
+            <td class="no-display-on-phone">
                 18:21
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="lot6.html">aa/05</a>
+            </td>
+            <td>
+                Warszawa
+            </td>
+            <td>
+                Lublin
+            </td>
+            <td class="no-display-on-phone">
+                03/03/2020
+            </td>
+            <td class="no-display-on-phone">
+                18:44
+            </td>
+        </tr>
+        <tr class="late-late">
+            <td>
+                <a href="lot7.html">aa/06</a>
+            </td>
+            <td>
+                Warszawa
+            </td>
+            <td>
+                Poznań
+            </td>
+            <td class="no-display-on-phone">
+                03/03/2020
+            </td>
+            <td class="no-display-on-phone">
+                19:09
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="lot8.html">aa/07</a>
+            </td>
+            <td>
+                Warszawa
+            </td>
+            <td>
+                Gdańsk
+            </td>
+            <td class="no-display-on-phone">
+                03/03/2020
+            </td>
+            <td class="no-display-on-phone">
+                19:32
             </td>
         </tr>
     </table>
 </div>
-<footer>
+</div>
+    <div class="item4">
+        <ul class="late-information">
+            <li>Lot numer aa/00 odwołany</li>
+            <li>Lot numer aa/03 opóźniony 20 min</li>
+            <li>Lot numer aa/06 opóźniony 68 min</li>
+        </ul>
+
+        <div class="form">
+            <label for="from">Skąd:</label>
+            <select id="from">
+                <option value="Warszawa">Warszawa</option>
+                <option value="Gdańsk">Gdańsk</option>
+                <option value="Płock">Płock</option>
+                <option value="Szczecin">Szczecin</option>
+            </select>
+            <label for="to">Dokąd:</label>
+            <select id="to">
+                <option value="Lublin">Lublin</option>
+                <option value="Sosnowienc">Sosnowiec</option>
+                <option value="Poznań">Poznań</option>
+                <option value="Szczecin">Szczecin</option>
+            </select>
+            <label for="dateData">Data:</label>
+            <input type="date" id="dateData">
+            <label for="name">Imię:</label>
+            <input type="name" id="name">
+            <label for="surname">Nazwisko:</label>
+            <input type="surname" id="surname">
+            <button>Wyślij</button>
+            <button>Resetuj</button>
+        </div>
+    </div>
+<footer class="item5" id="t3">
     Franciszek Bielen
 </footer>
+</div>
+
 </body>
 </html>
 

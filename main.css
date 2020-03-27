@@ -15,11 +15,75 @@ header {
     margin: 20px;
     font-size: 50px;
 }
-
 p {
     width: 75%;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+/*!* Menu*!*/
+
+#menu {
+    list-style-type:none;
+    margin:0;
+    border-left:1px solid #AAA;
+    padding:15px 0;
+    width:600px;
+}
+
+#menu li {
+    width: 150px;
+    margin-left:-1px;
+}
+
+#menu li a {
+    text-decoration:none;
+    display:block;
+    padding:10px 5px;
+    border:1px solid transparent;
+    border-left-color:#AAA;
+    color:#AAA;
+}
+
+#menu li a:hover {
+    color:#000;
+    border:1px solid #AAA;
+    border-left-color:#FFF;
+    border-radius:0 6px 6px 0;
+}
+
+/*Display*/
+.cancel {
+    font-style: oblique;
+    background-color: #f06d56;
+}
+
+.late-late {
+    font-style: oblique;
+    background-color: darkorange;
+}
+
+.late {
+    font-style: oblique;
+    background-color: yellow;
+}
+
+.late-information {
+    font-size: 10px;
+    width: 150px;
+    padding: 0 0 0 10px;
+    background-color: bisque;
+}
+
+.form {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.late-information li {
+    width: 150px;
 }
 
 img {
@@ -86,4 +150,211 @@ td {
     border-style: solid;
     border-width: 1px;
     padding: 5px;
+}
+
+.fly-table {
+    width: 40%;
+    display: inline-block;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.passengers {
+    display: inline-grid;
+}
+
+.passengers li:nth-child(even) {
+    background-color: burlywood;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+.item1, .item5 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+
+
+.grid-container {
+    justify-content: stretch;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 150px 60% 20%;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .item1, .item5, .item4 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    #logo {
+        display: block;
+        position: absolute;
+        width: 90px;
+        height: 32px;
+    }
+
+    .item4 {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .item2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .item3 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .grid-container {
+        justify-content: stretch;
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 30% 70%;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .item3 table {
+        border: none;
+        padding: 0;
+        font-size: 12px;
+    }
+
+    .late-information {
+        padding-left: 0;
+        margin: auto;
+    }
+
+    .form{
+        margin-top: 10px;
+    }
+
+    p {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    header {
+        margin: 5px;
+        font-size: 30px;
+    }
+
+    #pogoda {
+        font-size: initial;
+        position: initial;
+        margin-bottom: 0;
+    }
+
+    .fly-table {
+        width: 100%;
+        display: block;
+        border: none;
+    }
+
+    .no-display-on-tablet {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 300px) {
+    .grid-container {
+        display: block;
+    }
+
+    #logo {
+        display: block;
+        position: unset;
+        width: 100%;
+        height: 100%;
+    }
+
+    .item3 table {
+        border: none;
+        padding: 0;
+        font-size: 12px;
+    }
+
+    .late-information {
+        padding-left: 0;
+        margin: auto;
+    }
+
+    .form{
+        margin-top: 10px;
+    }
+
+    .no-display-on-phone , .no-display-on-tablet{
+        display: none;
+    }
+
+    p {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    header {
+        margin: 5px;
+        font-size: 35px;
+    }
+
+    .item2 {
+        display: none;
+    }
+
+    .passengers {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .passengers li {
+        width: initial;
+    }
+}
+
+.back {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    opacity: 50%;
+}
+
+.reservation-info {
+    position: fixed;
+    margin-left: 35%;
+    margin-top: 30%;
+    font-size: 30px;
+    background-color: darkred;
+    z-index: 1;
 }

@@ -15,7 +15,7 @@
     Lot nr aa/03
 </header>
 
-<a href="index.html" id="cofnij">Cofnij</a>
+<a href="index.html" id="cofnij" class="no-display-on-phone">Cofnij</a>
 
 <p>
     Czas lotu: 55min
@@ -23,8 +23,8 @@
 
 
 <div>
-    <img src="warszawa.jpg" alt="warszawa">
-    <img src="lublin.jpg" alt="lublin" >
+    <img src="warszawa.jpg" alt="warszawa" class="no-display-on-phone">
+    <img src="lublin.jpg" alt="lublin" class="no-display-on-phone">
 </div>
 
 
@@ -39,7 +39,7 @@
     <p id="pogoda" >Pogoda</p>
 
 
-    <table style="width: 40%; display: inline-block">
+    <table class="fly-table">
         <tr>
             <th>
                 Warszawa:
@@ -58,7 +58,8 @@
         </tr>
     </table>
 
-    <table style="width: 40%; display: inline-block">
+
+    <table class="fly-table">
         <tr>
             <th>
                 Typ
@@ -66,7 +67,7 @@
             <th>
                 Liczba miejsc
             </th>
-            <th>
+            <th class="no-display-on-phone">
                 Zdjęcie
             </th>
         </tr>
@@ -77,27 +78,42 @@
             <td>
                 269
             </td>
-            <td>
+            <td class="no-display-on-phone">
                 <img src="boeing737.jpeg">
             </td>
         </tr>
     </table>
-
 </div>
 
 <p style="font-size: 20px; margin-bottom: 0px; font-weight: bold;">
     Pasażerowie:
 </p>
 
-<ul>
-    <li>Adamiak Ada</li>
-    <li>Adamiak Adrian</li>
-    <li>Adamiak Aleksander</li>
-    <li>Adamiak Aldona</li>
-    <li>Adamiak Alojzy</li>
-    <li>Adamiak Alicja</li>
-    <li>Adamiak Alina</li>
-    <li>Adamiak Amelia</li>
+<ul class="passengers">
+    <li class="tooltip">Adamiak Ada
+        <span class="tooltiptext">Miejsce numer: 179</span>
+    </li>
+    <li class="tooltip">Adamiak Adrian
+        <span class="tooltiptext">Miejsce numer: 180</span>
+    </li>
+    <li class="tooltip">Adamiak Aleksander
+        <span class="tooltiptext">Miejsce numer: 181</span>
+    </li>
+    <li class="tooltip">Adamiak Aldona
+        <span class="tooltiptext">Miejsce numer: 182</span>
+    </li>
+    <li class="tooltip">Adamiak Alojzy
+        <span class="tooltiptext">Miejsce numer: 183</span>
+    </li>
+    <li class="tooltip">Adamiak Alicja
+        <span class="tooltiptext">Miejsce numer: 184</span>
+    </li>
+    <li class="tooltip">Adamiak Alina
+        <span class="tooltiptext">Miejsce numer: 185</span>
+    </li>
+    <li class="tooltip">Adamiak Amelia
+        <span class="tooltiptext">Miejsce numer: 186</span>
+    </li>
 </ul>
 
 </body>
